@@ -1,0 +1,24 @@
+Artist.create!(name: 'Vincent Van Gogh', nationality: 'Spanish')
+Artist.create!(name: 'Pablo Picasso', nationality: "Spanish")
+Artist.create!(name: "Francesco Tacconi", nationality: "Spanish")
+
+Painting.create!(name: 'Starry Night', artist_id: 1)
+Painting.create!(name: "The Virgin and Child", artist_id: 3)
+Painting.create!(name: "Guernica", artist_id: 2)
+
+Artist.all
+Painting.all
+
+Artist.find(2)
+Artist.where(name: 'Vincent Van Gogh')
+Artist.find_by(nationality: 'Spanish')
+
+Painting.find(1) # or Painting.first
+Painting.where(name: 'Guernico')
+
+gogh = Artist.find_by(name: 'Vincent Van Gogh')
+gogh.nationality = 'American'
+gogh.save!
+
+star = Painting.find_by(name: 'Starry Night')
+star.artist_id = Artist.where(name: 'Pablo Picasso').id
