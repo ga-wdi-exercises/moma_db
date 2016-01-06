@@ -6,4 +6,4 @@ require_relative './db/connection'
 require_relative './models/artist'
 require_relative './models/painting'
 
-binding.pry
+require_relative './ar_commands.rb'
