@@ -12,21 +12,24 @@ A Painting has
 ###Part 1 - Database Schemas
 
 1. Create a new database called `moma_db`.
-2. Create the database tables to model Artists, Paintings, and their relationships. Save this to a file called `moma.sql`
+2. Create the schema to model Artists and Paintings.
 
 ###Part 2 - Setting up ActiveRecord
 
-Create a Ruby program that creates an ActiveRecord interface for interacting with the artists & paintings. Save this to a file called `moma.rb`
+Create a Ruby program that creates an ActiveRecord interface for interacting with the artists & paintings.
 
-__Do NOT create a menu in Ruby. You should be interacting with your program and ActiveRecord using `binding.pry`.__
-__Do NOT use TDD.__
+Using a seed file, populate your database (using ActiveRecord) with at least 3 Artists and 3 Paintings (associated correctly):
 
-Populate your database (using ActiveRecord) with at least 3 Artists and 3 Paintings (associated correctly!), including Vincent Van Gogh and Pablo Picasso.
+```
+'Starry Night' by Vincent van Gogh (Dutch)
+'Guernica' by Pablo Picasso (Spanish)
+'Water Lilies' by Claude Money (French)
+```
 
 ###Part 3 - ActiveRecord Practice
 
 Write the commands that you would enter in pry to do the following:
-Save the pry commands to a file called `ar_commands.txt`
+Save the pry commands to a file called `ar_commands.rb`
 
 1. Create a new Artist (Vincent Van Gogh) and save him to your database
 2. Create a new Painting (Starry Night) and save it to your database
