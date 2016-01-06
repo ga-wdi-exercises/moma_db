@@ -1,10 +1,10 @@
-Artist.create!(name: 'Vincent Van Gogh', nationality: 'Spanish')
-Artist.create!(name: 'Pablo Picasso', nationality: "Spanish")
-Artist.create!(name: "Francesco Tacconi", nationality: "Spanish")
+vince = Artist.create!(name: 'Vincent Van Gogh', nationality: 'Spanish')
+pablo = Artist.create!(name: 'Pablo Picasso', nationality: "Spanish")
+francis = Artist.create!(name: "Francesco Tacconi", nationality: "Spanish")
 
-Painting.create!(name: 'Starry Night', artist_id: 1)
-Painting.create!(name: "The Virgin and Child", artist_id: 3)
-Painting.create!(name: "Guernica", artist_id: 2)
+vince.paintings.create!(name: 'Starry Night', artist_id: 1)
+francis.paintings.create!(name: "The Virgin and Child", artist_id: 3)
+pablo.paintings.create!(name: "Guernica", artist_id: 2)
 
 Artist.all
 Painting.all
