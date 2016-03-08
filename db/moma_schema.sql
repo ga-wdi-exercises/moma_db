@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS artist;
+DROP TABLE IF EXISTS painting;
+
+CREATE TABLE artist (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  nationality TEXT NOT NULL
+);
+
+CREATE TABLE painting (
+  id SERIAL PRIMARY KEY,
+  title TEXT NOT NULL
+);
