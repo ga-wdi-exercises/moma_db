@@ -58,4 +58,4 @@ van_gogh.update(nationality: "United States")
 # 13. Change "Starry Night" to be one of Pablo Picasso's paintings
 
 starry_night = Painting.find_by(title: "Starry Night")
-starry_night.update(artist_id: 2)
+starry_night.artist = Artist.find_by(name: "Pablo Picasso")
