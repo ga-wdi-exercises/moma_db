@@ -9,17 +9,17 @@ Vincent = Artist.new(name: "Vincent Van Gogh", nationality: "Dutch");
 Vincent.save
 # 2. Create a new Painting (Starry Night) and save it to your database
 SN = Painting.new(title: "Starry Night", artist_id: 1);
-Vincent.save
+SN.save
 # 3. Return all Artists
-
+Artist.all
 # 4. Return all Paintings
-
+Painting.all?
 # 5. Return the artist with an id of 2
-
+Artist.find(2)
 # 6. Return the artist with a name of "Vincent Van Gogh"
-
+Artist.find_by(name: 'Vincent van Gogh')
 # 7. Return all the artists from Spain
-
+Artist.find_by(nationality: 'Spanish')
 # 8. Return the painting with an id of 1
 
 # 9. Return the painting with a name of "Guernica"
