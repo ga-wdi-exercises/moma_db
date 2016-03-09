@@ -1,4 +1,5 @@
 require "bundler/setup"
+
 require "pg"
 require "active_record"
 require "pry"
@@ -18,3 +19,7 @@ monet = Artist.create(name: "Claude Monet", nationality: "French")
 van_gogh.paintings.create(title: "Starry Night")
 picasso.paintings.create(title: "Guernica")
 monet.paintings.create(title: "Water Lilies")
+
+binding.pry
+
+puts "end of seed file"
