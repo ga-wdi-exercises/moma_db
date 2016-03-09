@@ -5,7 +5,7 @@ require "pry"
 
 require_relative "db/connection"
 require_relative "models/artist"
-require_relative "models/song"
+require_relative "models/painting"
 
 binding.pry
 
