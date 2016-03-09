@@ -1,15 +1,25 @@
+require "bundler/setup" # require all the gems we'll be using for this app from the Gemfile. Obviates the need for `bundle exec`
 
-TRUNCATE TABLE artists CASCADE;
-TRUNCATE TABLE paintings CASCADE;
+require "pg"
+require "active_record"
+require "pry"
 
-ALTER SEQUENCE artists_id_seq RESTART WITH 1;
-ALTER SEQUENCE paintings_id_seq RESTART WITH 1;
+require_relative "../models/painting"
+require_relative "../models/artist"
 
-INSERT INTO artists (name, nationality) VALUES ('Vincent van Gogh', 'Dutch');
-INSERT INTO paintings (title, artist_id) VALUES ('Starry Night');
+require_relative "../db/connection.rb"
 
-INSERT INTO artists (name, nationality) VALUES ('Pablo Picasso', 'Spanish');
-INSERT INTO paintings (title, artist_id) VALUES ('Guernica');
 
-INSERT INTO artists (name, nationality) VALUES ('Claude Money', 'French');
-INSERT INTO paintings (title, artist_id) VALUES ('Water Lilies');
+Artist.destroy_all
+Painting.destroy_all
+# destroys existing data in database
+
+#creating artists
+gogh = Artist.create(name: "Vincent van Gogh", nationality: "Dutch")
+picasso = Artist.create(name: "Pablo Picasso", nationality: "Spanish")
+money = Artist.create(name: "Claude Money ", nationality: "French")
+
+#creating paintings
+gogh.paintings.create(title: "Starry Night")
+picasso.paintings.create(title: "Guernica")
+money.paintings.create(title: "Water Lilies")
