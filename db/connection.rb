@@ -1,4 +1,4 @@
 ActiveRecord::Base.establish_connection(
   :adapter => "postgresql",
-  :database => "tunr_db"
+  :database => "moma_db"
 )
