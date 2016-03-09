@@ -25,7 +25,7 @@ Painting.find(1)
 # 9. Return the painting with a name of "Guernica"
 Painting.where(title:'Guernica')
 # 10. Return all the paintings that "Pablo Picasso" painted
-pablo = Artist.where(name:'Pablo Picasso')
+pablo = Artist.find_by(name:'Pablo Picasso')
 pablo.paintings
 # 11. Return the artist of "Guernica"
 guernica = Painting.find_by(title:"Guernica")
