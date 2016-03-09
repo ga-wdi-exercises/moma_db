@@ -10,5 +10,5 @@ CREATE TABLE artists (
 CREATE TABLE paintings (
   id SERIAL PRIMARY KEY,
   title TEXT NOT NULL,
-  artistID INT
+  artist_id INT
 );
