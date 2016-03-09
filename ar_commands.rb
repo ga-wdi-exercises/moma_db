@@ -29,4 +29,4 @@ Painting.find_by(title: 'Guernica').artist
 # 12. Change Vincent Van Gogh's nationality to USA
 Artist.find_by(name: 'Vincent van Gogh').update(nationality: 'USA')
 # 13. Change "Starry Night" to be one of Pablo Picasso's paintings
-Painting.find_by(title: 'Starry Night').update(artist_id: Artist.find_by(name: 'Pablo Picasso').id)
+Painting.find_by(title: 'Starry Night').update(artist_id: Artist.find_by(name: 'Pablo Picasso').id) 
