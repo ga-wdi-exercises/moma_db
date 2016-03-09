@@ -3,16 +3,12 @@ DROP TABLE IF EXISTS paintings;
 
 CREATE TABLE artists (
   id SERIAL PRIMARY KEY,
-  first_name TEXT NOT NULL,
-  last_name TEXT NOT NULL,
-  age INT NOT NULL
+  name TEXT NOT NULL,
+  nationality TEXT
 );
 
 CREATE TABLE paintings (
   id SERIAL PRIMARY KEY,
-  first_name TEXT NOT NULL,
-  last_name TEXT NOT NULL,
-  age INT NOT NULL,
-  job TEXT,
+  title TEXT NOT NULL,
   artist_id INT
 );
