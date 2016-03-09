@@ -1,9 +1,3 @@
-require "active_record"
-
-require_relative "db/connection"
-require_relative "models/artist"
-require_relative "models/painting"
-
 # 1. Create a new Artist (Vincent Van Gogh) and save him to your database
 
 # 2. Create a new Painting (Starry Night) and save it to your database
