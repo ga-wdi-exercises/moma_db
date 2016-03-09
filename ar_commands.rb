@@ -25,7 +25,9 @@ Artist.find(guernica.artist_id)
 # 12. Change Vincent Van Gogh's nationality to USA
 gogh = Artist.find_by(first_name: "Vincent", last_name: "Van Gogh")
 gogh.nationality = "USA"
+gogh.save
 # 13. Change "Starry Night" to be one of Pablo Picasso's paintings
 starry_night = Painting.find_by(title: "Starry Night")
 picasso = Artist.find_by(first_name: "Pablo", last_name: "Picasso")
 starry_night.artist_id = picasso.id
+starry_night.save
