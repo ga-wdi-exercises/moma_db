@@ -2,9 +2,9 @@ require "pg"
 require "active_record"
 require "pry"
 
-require_relative "../models/student"
-require_relative "../models/instructor"
-require_relative "../db/connection.rb"
+require_relative "../models/artist"
+require_relative "../models/painting"
+require_relative "../db/connection"
 
 Artist.destroy_all
 Painting.destroy_all
