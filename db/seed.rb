@@ -7,6 +7,9 @@ require_relative "../models/artist"
 require_relative "../models/painting"
 require_relative "../db/connection.rb"
 
+Artist.destroy_all
+Painting.destroy_all
+
 vanGoh = Artist.create(name: "Vincent VanGoh", nationality: "Dutch")
 picasso = Artist.create(name: "Pablo Picasso", nationality: "Spanish")
 monet = Artist.create(name: "Claude Monet", nationality: "Spanish")
