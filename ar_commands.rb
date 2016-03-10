@@ -30,11 +30,19 @@ require_relative "models/painting"
 
 # 7. Return all the artists from Spain
 
+  Artist.find_by(nationality: "Spanish")
+
 # 8. Return the painting with an id of 1
+
+  Painting.find(1) # Note: When I loaded my seed.rb file, the painting ids were 4, 5, 6
 
 # 9. Return the painting with a name of "Guernica"
 
+  Painting.where(title: "Guernica")
+
 # 10. Return all the paintings that "Pablo Picasso" painted
+
+  
 
 # 11. Return the artist of "Guernica"
 
