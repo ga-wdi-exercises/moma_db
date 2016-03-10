@@ -1,12 +1,13 @@
-DROP TABLE IF EXISTS artists
-DROP TABLE IF EXISTS paintings
+DROP TABLE IF EXISTS artists;
+DROP TABLE IF EXISTS paintings;
 
 CREATE TABLE artists (
-  id SERIAL PRIMARY KEY
-  name TEXT NOT NULL
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
   nationality TEXT NOT NULL
 );
 
 CREATE TABLE paintings (
-  title TEXT NOT NULL
+  title TEXT NOT NULL,
+  artist_id INT
 );
