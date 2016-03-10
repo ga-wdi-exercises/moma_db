@@ -6,7 +6,7 @@ require_relative "models/painting"
 
 # 1. Create a new Artist (Vincent Van Gogh) and save him to your database
 
-Vincent = Artist.new(name: "Vincent Van Gogh", nationality: "Dutch");
+Vincent = Artist.new(name: Vincent Van Gogh", nationality: "Dutch");
 Vincent.save
 # 2. Create a new Painting (Starry Night) and save it to your database
 
