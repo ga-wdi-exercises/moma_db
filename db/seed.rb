@@ -18,3 +18,6 @@ monet = Artist.create(name:'Claude Monet', nationality:'French')
 vincent.painting.create(title:'Starry Night')
 picasso.painting.create(title:'Guernica')
 monet.painting.create(title:'Water Lilies')
+
+puts "Created #{Artist.all.count} artists"
+puts "Created #{Painting.all.count} paintings"

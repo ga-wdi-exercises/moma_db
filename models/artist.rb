@@ -1,3 +1,3 @@
 class Artist < ActiveRecord::Base
-  has_many :painting
+  has_many :paintings
 end
