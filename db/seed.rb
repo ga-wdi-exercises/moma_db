@@ -10,10 +10,10 @@ require_relative "../db/connection.rb"
 Artist.destroy_all
 Painting.destroy_all
 
-vanGoh = Artist.create(name: "Vincent VanGoh", nationality: "Dutch")
+vanGogh = Artist.create(name: "Vincent VanGogh", nationality: "Dutch")
 picasso = Artist.create(name: "Pablo Picasso", nationality: "Spanish")
 monet = Artist.create(name: "Claude Monet", nationality: "Spanish")
 
-vanGoh.paintings.create(title: "Starry Night")
+vanGogh.paintings.create(title: "Starry Night")
 picasso.paintings.create(title: "Guernica")
 monet.paintings.create(title: "Water Lilies")
