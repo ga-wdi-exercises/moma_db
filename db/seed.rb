@@ -15,7 +15,7 @@ Painting.destroy_all
 # 'Guernica' by Pablo Picasso (Spanish)
 # 'Water Lilies' by Claude Money (French)
 vangogh = Artist.create(name: "Vincent van Gogh", nationality: "Dutch")
-picasso = Artist.create(name: "Pable Picasso", nationality: "Spanish")
+picasso = Artist.create(name: "Pablo Picasso", nationality: "Spanish")
 monet = Artist.create(name: "Claude Monet", nationality: "French")
 
 vangogh.paintings.create(title: "Starry Night")
