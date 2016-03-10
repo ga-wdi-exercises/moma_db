@@ -13,7 +13,7 @@ SN.save
 # 3. Return all Artists
 Artist.all
 # 4. Return all Paintings
-Painting.all?
+Painting.all
 # 5. Return the artist with an id of 2
 Artist.find(2)
 # 6. Return the artist with a name of "Vincent Van Gogh"
