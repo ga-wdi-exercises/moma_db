@@ -27,7 +27,8 @@ Painting.find_by(name: "Guernica")
 Painting.where(artist_id: 5)
 # (pssst... it's id #5 for me because I had to reload my seed file because I can't (appartenly) spell Van Gogh)
 # 11. Return the artist of "Guernica"
-No idea on this one.
+guernica = Patining.find_by(title: "Guernica")
+guernica.artist
 # 12. Change Vincent Van Gogh's nationality to USA
 vanGogh = Artist.find_by(nationality: "Dutch")
 vanGogh.update( nationality: "USA")
