@@ -12,6 +12,9 @@ A Painting has
 ###Part 1 - Database Schemas
 
 1. Create a new database called `moma_db`.
+  $cd db
+  $createdb moma_db
+  
 2. Create the schema to model Artists and Paintings.
 
 ###Part 2 - Setting up ActiveRecord
