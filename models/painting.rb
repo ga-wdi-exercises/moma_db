@@ -1,3 +1,3 @@
 class Painting < ActiveRecord::Base
-  belongs_to :instructor
+  belongs_to :artist
 end

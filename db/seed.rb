@@ -1,12 +1,6 @@
-require "bundler/setup"
-
-require "pg"
 require "active_record"
-require "pry"
-
 require_relative "../models/artist"
 require_relative "../models/painting"
-
 require_relative "connection.rb"
 
 Artist.destroy_all
