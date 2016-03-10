@@ -5,9 +5,9 @@ require_relative "models/artist"
 require_relative "models/painting"
 
 # 1. Create a new Artist (Vincent Van Gogh) and save him to your database
-
+vanGoh = Artist.create(name: "Vincent VanGoh", nationality: "Dutch")
 # 2. Create a new Painting (Starry Night) and save it to your database
-
+vanGoh.paintings.create(title: "Starry Night")
 # 3. Return all Artists
 
 # 4. Return all Paintings
