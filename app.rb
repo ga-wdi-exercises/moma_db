@@ -9,5 +9,5 @@ require_relative "models/painting"
 
 
 
-
+binding.pry
 puts "end of app.rb file"

@@ -27,7 +27,7 @@ require_relative "models/painting"
   # Painting.find(vince.id)
 # 11. Return the artist of "Guernica"
   # guernica =Painting.find_by(title: "Guernica")
-  # Artist.find(guernica.artist_id
+  # guernica.artist
 # 12. Change Vincent Van Gogh's nationality to USA
     # vince.update(nationality: "USA")
 # 13. Change "Starry Night" to be one of Pablo Picasso's paintings
