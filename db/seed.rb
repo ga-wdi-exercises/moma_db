@@ -1,4 +1,6 @@
+require "pry"
 require "active_record"
+require "pg"
 
 require_relative "connection"
 require_relative "../models/artist"
@@ -19,3 +21,7 @@ monet = Artist.create(name: "Claude Monet", nationality: "French")
 vangogh.paintings.create(title: "Starry Night")
 picasso.paintings.create(title: "Guernica")
 monet.paintings.create(title: "Water Lilies")
+
+binding.pry
+
+puts "last line"

@@ -9,8 +9,10 @@ require_relative "models/painting"
 # 2. Create a new Painting (Starry Night) and save it to your database
 
 # 3. Return all Artists
+Artist.all
 
 # 4. Return all Paintings
+Painting.all
 
 # 5. Return the artist with an id of 2
 
