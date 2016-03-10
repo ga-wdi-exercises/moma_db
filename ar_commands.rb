@@ -21,13 +21,15 @@ Artist.find_by(name: 'Vincent van Gogh')
 # 7. Return all the artists from Spain
 Artist.find_by(nationality: 'Spanish')
 # 8. Return the painting with an id of 1
-
+Painting.find(1)
 # 9. Return the painting with a name of "Guernica"
-
+Painting.find_by(title: 'Guernica')
 # 10. Return all the paintings that "Pablo Picasso" painted
-
+Artist.find_by(name: "Pablo").paintings
 # 11. Return the artist of "Guernica"
-
+Painting.find_by(title: "Guernica").artist
 # 12. Change Vincent Van Gogh's nationality to USA
-
+van = Artist.find_by(name: "Vincent van Gogh")
+van.update(nationality: "American")
 # 13. Change "Starry Night" to be one of Pablo Picasso's paintings
+Painting.find_by(title: "Starry Night").artist.update(name: "Pablo")
