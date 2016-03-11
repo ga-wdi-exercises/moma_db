@@ -1,4 +1,4 @@
-class Artist
+class Artist 
   has_many :paintings
 
   attr_accessor :name, :nationality
