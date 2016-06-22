@@ -1,51 +1,31 @@
 # MOMA App
 
-This app will have 2 models: Artists and Paintings. An Artist has many paintings, and a Painting belongs to an Artist.
+## Local set up
 
-An Artist has
-* name
-* nationality
-
-A Painting has
-* title
-
-###Part 1 - Database Schemas
-
-1. Create a new database called `moma_db`.
-2. Create the schema to model Artists and Paintings.
-
-###Part 2 - Setting up ActiveRecord
-
-Create a Ruby program that creates an ActiveRecord interface for interacting with the artists & paintings.
-
-Using a seed file, populate your database (using ActiveRecord) with at least 3 Artists and 3 Paintings (associated correctly):
+Install dependencies that are specified in `Gemfile`
 
 ```
-'Starry Night' by Vincent van Gogh (Dutch)
-'Guernica' by Pablo Picasso (Spanish)
-'Water Lilies' by Claude Money (French)
+$ bundle install
 ```
 
-###Part 3 - ActiveRecord Practice
+Create a new database called moma_db.
 
-Write the commands that you would enter in pry to do the following:
-Save the pry commands to a file called `ar_commands.rb`
+```
+$ createdb moma_db
+```
 
-1. Create a new Artist (Vincent Van Gogh) and save him to your database
-2. Create a new Painting (Starry Night) and save it to your database
+Migrate a schema to the database.
 
-3. Return all Artists
-4. Return all Paintings
+```
+$ psql -d moma_db < db/schema.sql
+```
 
-5. Return the artist with an id of 2
-6. Return the artist with a name of "Vincent Van Gogh"
-7. Return all the artists who are "Spanish"
+Seed the database using ActiveRecord.
 
-8. Return the painting with an id of 1
-9. Return the painting with a name of "Guernica"
+```
+$ psql -d moma_db < db/seeds.rb
+```
 
-10. Return all the paintings that "Pablo Picasso" painted
-11. Return the artist of "Guernica"
+## Troubleshooting
 
-12. Change Vincent Van Gogh's nationality to "American"
-13. Change "Starry Night" to be one of Pablo Picasso's paintings
+- In SQL commands, use single quotes `''`. Double quotes cause an error.
