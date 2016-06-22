@@ -1,15 +1,19 @@
+require "active_record"
 
-TRUNCATE TABLE paintings CASCADE;
-TRUNCATE TABLE artists CASCADE;
+require_relative "connection"
+require_relative "../models/artist"
+require_relative "../models/painting"
 
-ALTER SEQUENCE paintings_id_seq RESTART WITH 1;
-ALTER SEQUENCE artists_id_seq RESTART WITH 1;
+Painting.destroy_all
+Artist.destroy_all
 
-INSERT INTO artists (name, nationality) VALUES ('Vincent van Gogh', 'Dutch');
-INSERT INTO paintings (title, artist_id) VALUES ('Starry Night', 1);
+vangogh= Artist.create(name: "Vincent van Gogh", nationality: "Dutch")
+picasso = Artist.create(name: "Pablo Picasso", nationality: "Spanish")
+monet = Artist.create(name: "Claude Monet", nationality: "French")
 
-INSERT INTO artists (name, nationality) VALUES ('Pablo Picasso', 'Spanish');
-INSERT INTO paintings (title, artist_id) VALUES ('Guernica', 2);
 
-INSERT INTO artists (name, nationality) VALUES ('Claude Monet', 'French');
-INSERT INTO paintings (title, artist_id) VALUES ('Water Lillies', 3);
+Painting.create([
+    {title: "Starry Night", artist: vangogh },
+    {title: "Guernica", artist: picasso },
+    {title: "Water Lilies", artist: monet },
+  ])
