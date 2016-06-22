@@ -24,26 +24,20 @@ Painting.destroy_all
 Artist.destroy_all
 
 # Create sample artists.
-gogh = Artist.create(
-  name: "Vincent van Gogh",
-  nationality: "Holland"
-)
-picasso = Artist.create(
-  name: "Pablo Picasso",
-  nationality: "Spain"
-)
-money = Artist.create(
-  name: "Claude Money",
-  nationality: "France"
-)
+gogh    = Artist.create(name: "Vincent van Gogh", nationality: "Holland")
+picasso = Artist.create(name: "Pablo Picasso", nationality: "Spain")
+money   = Artist.create(name: "Claude Money", nationality: "France")
 
 # Create paintings that are associated with artists.
-gogh.paintings.create(
-  {title: "Starry Night"}
-)
-picasso.paintings.create(
-  {title: "Guernica"}
-)
-money.paintings.create(
-  {title: "Water Lilies"}
-)
+gogh.paintings.create([
+  { title: "Starry Night" },
+  { title: "Donburi" }
+])
+picasso.paintings.create([
+  { title: "Guernica" },
+  { title: "Gyudon" }
+])
+money.paintings.create([
+  { title: "Water Lilies" },
+  { title: "Sushi" }
+])

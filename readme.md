@@ -20,10 +20,10 @@ Migrate a schema to the database.
 $ psql -d moma_db < db/schema.sql
 ```
 
-Seed the database.
+Seed the database using ActiveRecord.
 
 ```
-$ psql -d moma_db < db/seeds.sql
+$ psql -d moma_db < db/seeds.rb
 ```
 
 ## Troubleshooting
