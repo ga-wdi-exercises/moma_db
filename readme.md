@@ -14,7 +14,18 @@ Create a new database called moma_db.
 $ createdb moma_db
 ```
 
+Migrate a schema to the database.
+
 ```
 $ psql -d moma_db < db/schema.sql
+```
+
+Seed the database.
+
+```
 $ psql -d moma_db < db/seeds.sql
 ```
+
+## Troubleshooting
+
+- In SQL commands, use single quotes `''`. Double quotes cause an error.
